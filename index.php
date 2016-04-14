@@ -31,10 +31,6 @@ foreach($qs_files as &$file) {
 }
 
 if (count($files)) {
-   if (!file_exists($cache_location)) {
-      mkdir("$cache_location");
-   }
-
    $cache_file = "$cache_location/" . implode("-", $hashes) . ".js";
    if (!file_exists($cache_file)) {
       $command = "$node_location $uglifyjs_location " . implode(" ", $files) . " -c -o $cache_file";
