@@ -1,8 +1,5 @@
 <?php
 
-ini_set("display_errors", 1);
-error_reporting(-1);
-
 if (strtoupper(substr(PHP_OS, 0, 3)) === "WIN") {
    $node_location = "C:\\nodejs\\node.exe";
 } else {
